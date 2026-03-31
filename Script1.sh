@@ -1,18 +1,40 @@
 #!/bin/bash
 # Script 1: System Identity Report
-# Author: [Your Name] | Course: Open Source Software
+# Author: SAKSHI CHANDRA
+# Course: Open Source Software
+# Software Choice: Git
+
 # --- Variables ---
-STUDENT_NAME="Sakshi" # Fill in your name
-SOFTWARE_CHOICE="Python" # Fill in your chosen software
+# Specific details for audit
+STUDENT_NAME="SAKSHI CHANDRA"
+SOFTWARE_CHOICE="Git"
+
 # --- System info ---
+# Capturing real-time system data using command substitution
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
 UPTIME=$(uptime -p)
+
+# --- Completed TODOS ---
+# 1. Distro Name: Using the lsb_release to specifically identify Ubuntu
+DISTRO=$(lsb_release -ds)
+# 2. Date: Formatted for readability
+CURRENT_DATE=$(date "+%Y-%m-%d %H:%M:%S")
+
 # --- Display ---
-echo "================================"
-echo " Open Source Audit — $STUDENT_NAME"
-echo "================================"
-echo "Kernel : $KERNEL"
-echo "User : $USER_NAME"
-echo "Uptime : $UPTIME"
-# TODO: Add distro name, date, and license message
+# Formatting the output for the report screenshot
+echo "=========================================="
+echo "   Open Source Audit - $STUDENT_NAME      "
+echo "=========================================="
+echo "Chosen Software  : $SOFTWARE_CHOICE"
+echo "------------------------------------------"
+echo "Operating System : $DISTRO"
+echo "Kernel Version   : $KERNEL"
+echo "Current User     : $USER_NAME"
+echo "Home Directory   : $HOME"
+echo "System Uptime    : $UPTIME"
+echo "Current Date/Time: $CURRENT_DATE"
+echo "------------------------------------------"
+# 3. License Message: Added as per requirements
+echo "Note: This OS is covered by the GNU GPL License."
+echo "=========================================="
